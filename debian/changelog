@@ -1,3 +1,14 @@
+lxml (4.2.1-1ubuntu0.1) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: XSS attacks
+    - debian/patches/CVE-2018-19787.patch:
+      Make the cleaner remove javascript URLs
+      that use espacing in in src/lxml/html/clean.py,
+      src/lxml/html/tests/test_clean.txt.
+    - CVE-2018-19787
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Fri, 07 Dec 2018 09:50:09 -0300
+
 lxml (4.2.1-1) unstable; urgency=medium
 
   * New upstream version 4.2.1.
