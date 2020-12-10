@@ -1,3 +1,27 @@
+lxml (4.2.1-1ubuntu0.3) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: XSS vulnerability
+    - debian/patches/CVE-2020-27783-part2.patch:
+      This adds the missing part reported from upstream
+      Prevent combinations of <noscript> and <style> to sneak
+      JS through the HTML cleaner in src/lxml/html/clean.py,
+      src/lxml/html/tests/test_clean.py.
+    - CVE-2020-27783
+  * Adding --with-cython to debian/rules in order to it build compile the .py
+    files changed and regenerate the .c files to the binaries.
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Thu, 10 Dec 2020 14:18:33 -0300
+
+lxml (4.2.1-1ubuntu0.2) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: XSS vulnerability
+    - Prevent combinations of <noscript> and <style> to sneak
+      JS through the HTML cleaner in src/lxml/html/clean.py,
+      src/lxml/html/tests/test_clean.py.
+    - CVE-2020-27783
+
+ -- Leonidas Da Silva Barbosa <leo.barbosa@canonical.com>  Tue, 08 Dec 2020 13:53:38 -0300
+
 lxml (4.2.1-1ubuntu0.1) bionic-security; urgency=medium
 
   * SECURITY UPDATE: XSS attacks
